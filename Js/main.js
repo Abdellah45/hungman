@@ -15,6 +15,9 @@ let win = localStorage.getItem("win");
 
 let loss = localStorage.getItem("loss");
 
+window.onload = function () {
+  document.getElementById("loading").remove();
+}
 
 document.querySelector(".game_name span").innerHTML = loss;
 document.querySelector(".category span").innerHTML = win;

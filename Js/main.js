@@ -69,11 +69,14 @@ let level = "";
 
 let hangDrow = document.querySelector(".hangman_drow");
 
+let wordLetters = "";
+
 fetch(url)
   .then(res => res.json())
   .then(out => {
     randomWord = out[0].word;
 
+console.log(randomWord);
 
 let wordLetters = Array.from(randomWord);
 
@@ -88,7 +91,7 @@ wordLetters.forEach(lett => {
   lettersGuss.appendChild(emptySpan);
 });
 
- });
+
 let Spans = document.querySelectorAll(".letters_guess span");
 
 
@@ -182,6 +185,8 @@ document.addEventListener("click",function (e){
     window.location.reload();
   }
   
+});
+
 });
 
 function endGame() {
